@@ -24,7 +24,7 @@ To use this pipeline, you need a **Mastodon API access token**. You can obtain o
 
 ## ⚙️ Installation
 
-Once you obtain the ACCESS_TOKEN, provide it to 'IDSS_pipeline.py' file. Then, install the required packages as follows
+Once you obtain the ACCESS_TOKEN, provide it to `IDSS_pipeline.py` file. Then, install the required packages as follows
 
 ```bash
 pip install -r requirements.txt
