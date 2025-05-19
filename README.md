@@ -6,7 +6,7 @@ This repository implements **Interaction-Driven Snowball Sampling (IDSS)** to id
 
 The diagram below illustrates the IDSS workflow, which iteratively expands the dataset by tracing user interactions:
 
-![IDSS Data Collection Process](IDSS_data_collection_figure.pdf)
+![IDSS Data Collection Process](IDSS_data_collection_figure.png)
 
 ## 🛠️ Requirements
 
