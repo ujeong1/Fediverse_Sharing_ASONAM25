@@ -1,19 +1,30 @@
 # Interaction-Driven Snowball Sampling (IDSS) for Threads Users via Mastodon API
 
-This repository provides a pipeline for **Interaction-Driven Snowball Sampling (IDSS)** to collect Threads users who have enabled **Fediverse Sharing**. The sampling is conducted through the **Mastodon API**, using `mastodon.social` as the primary instance.
+## 📊 Overview
 
-## 📂 Files
+This repository implements **Interaction-Driven Snowball Sampling (IDSS)** to identify Threads users who have enabled **Fediverse Sharing**, using the **Mastodon API**. The process is anchored on the `mastodon.social` instance due to its broad federation with other servers.
 
-- `IDSS_pipeline.py`: Main script that includes all stages of the IDSS process, including:
-  - Seed user discovery via `@threads.net` profile search
-  - Recursive expansion by tracing replies to seed users
-  - Deduplication and interaction tracking
+The diagram below illustrates the IDSS workflow, which iteratively expands the dataset by tracing user interactions:
+
+![IDSS Data Collection Process](IDSS_data_collection_figure.pdf)
+
+## 🛠️ Requirements
+
+To use this pipeline, you need a **Mastodon API access token**. You can obtain one by registering an application on your Mastodon account. A helpful guide is available here:  
+🔗 [How to Get a Mastodon API Token](https://martinheinz.dev/blog/86)
+
+## 📁 Repository Contents
+
+- `IDSS_pipeline.py`: Main script that implements the full IDSS process:
+  - Seed user discovery using `@threads.net` profile search
+  - Recursive expansion by tracking replies to seed user posts
+  - Deduplication and interaction mapping
 
 - `requirements.txt`: Lists all Python dependencies needed to run the pipeline.
 
-## 🔧 Installation
+## ⚙️ Installation
 
-Install the required dependencies with:
+Install the required packages with:
 
 ```bash
 pip install -r requirements.txt
